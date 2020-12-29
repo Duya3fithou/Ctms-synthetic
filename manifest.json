@@ -1,20 +1,20 @@
 {
     "manifest_version": 2,
-    "name": "chrome-extension-template",
+    "name": "Ctms synthetic",
     "version": "0.0.1",
-    "description": "Chrome extension boilerplate, replace all values!",
+    "description": "Extension for FitHou Ctms",
     "icons": {
         "16": "16x16.png",
         "48": "48x48.png",
         "128": "128x128.png"
     },
     "browser_action": {
-        "default_title": "Boilerplate popup!",
+        "default_title": "Ctms synthetic!",
         "default_popup": "popup.html"
     },
     "content_scripts": [
         {
-            "matches": ["<all_urls>"],
+            "matches": ["http://ctms.fithou.net.vn/KetquaHoctap.aspx?sid="],
             "js": ["in-content.js"]
         }
     ],
@@ -25,5 +25,5 @@
     "content_security_policy":
         "script-src 'self' 'unsafe-eval'; object-src 'self'; img-src * data: 'self' 'unsafe-eval'",
     "offline_enabled": true,
-    "permissions": ["tabs", "<all_urls>", "activeTab"]
+    "permissions": ["tabs", "activeTab"]
 }
